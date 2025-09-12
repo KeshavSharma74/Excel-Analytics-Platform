@@ -3,9 +3,14 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import dbConnect from "./libs/database.js";
 import "dotenv/config"
+import userRouter from "./routes/user.routes.js";
 
 const app=express();
-// console.log("lord keshav")
+app.use(cors());
+app.use(cookieParser());
+app.use(express.json());
+app.use('/api/user',userRouter);
+
 const port = process.env.port || 4000;
 
 app.get('/',(req,res)=>{
