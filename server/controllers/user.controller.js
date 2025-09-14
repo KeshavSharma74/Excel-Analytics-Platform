@@ -71,8 +71,11 @@ const register = async (req, res) => {
 
 // 🔹 Login
 const login = async (req, res) => {
+  // console.log("login backend mei agya")
   const { email, password } = req.body;
 
+  // console.log("email : ",email);
+  // console.log("password : ",password);
   if (!email || !password) {
     return res.json({
       success: false,
@@ -109,6 +112,7 @@ const login = async (req, res) => {
       sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
+    // console.log("token : ",token);
 
     return res.json({
       success: true,
@@ -259,6 +263,7 @@ const resetPassword = async (req, res) => {
 };
 
 const checkAuth = async(req,res)=>{
+  // console.log("checkauth backend controller tk agya");
   try{
             const {userId} = req.body;
 
