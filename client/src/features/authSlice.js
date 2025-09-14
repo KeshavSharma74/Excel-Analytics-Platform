@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000";
+const API_URL = "https://excel-analytics-platform-lovat.vercel.app";
 
 axios.defaults.withCredentials = true;
 
