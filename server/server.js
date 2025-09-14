@@ -7,7 +7,7 @@ import userRouter from "./routes/user.routes.js";
 
 const app=express();
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "excel-analytics-platform-2u9i.vercel.app",
   credentials: true
 }));
 app.use(cookieParser());
